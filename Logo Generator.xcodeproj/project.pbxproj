@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		1BEA0C32294BBC1700B60FE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C31294BBC1700B60FE0 /* AppDelegate.swift */; };
 		1BEA0C34294BBC1700B60FE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C33294BBC1700B60FE0 /* SceneDelegate.swift */; };
-		1BEA0C36294BBC1700B60FE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C35294BBC1700B60FE0 /* ViewController.swift */; };
-		1BEA0C39294BBC1700B60FE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEA0C37294BBC1700B60FE0 /* Main.storyboard */; };
+		1BEA0C36294BBC1700B60FE0 /* LogoGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C35294BBC1700B60FE0 /* LogoGeneratorViewController.swift */; };
 		1BEA0C3B294BBC1900B60FE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BEA0C3A294BBC1900B60FE0 /* Assets.xcassets */; };
 		1BEA0C3E294BBC1900B60FE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEA0C3C294BBC1900B60FE0 /* LaunchScreen.storyboard */; };
 		1BEA0C49294BBC1900B60FE0 /* Logo_GeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C48294BBC1900B60FE0 /* Logo_GeneratorTests.swift */; };
 		1BEA0C53294BBC1900B60FE0 /* Logo_GeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C52294BBC1900B60FE0 /* Logo_GeneratorUITests.swift */; };
 		1BEA0C55294BBC1900B60FE0 /* Logo_GeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C54294BBC1900B60FE0 /* Logo_GeneratorUITestsLaunchTests.swift */; };
+		1BEA0C63294BBCCB00B60FE0 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEA0C62294BBCCB00B60FE0 /* StableDiffusion */; };
+		1BEA0C68294BBCF100B60FE0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEA0C67294BBCF100B60FE0 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,7 @@
 		1BEA0C2E294BBC1700B60FE0 /* Logo Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Logo Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEA0C31294BBC1700B60FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BEA0C33294BBC1700B60FE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1BEA0C35294BBC1700B60FE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1BEA0C38294BBC1700B60FE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1BEA0C35294BBC1700B60FE0 /* LogoGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoGeneratorViewController.swift; sourceTree = "<group>"; };
 		1BEA0C3A294BBC1900B60FE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BEA0C3D294BBC1900B60FE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BEA0C3F294BBC1900B60FE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BEA0C68294BBCF100B60FE0 /* SnapKit in Frameworks */,
+				1BEA0C63294BBCCB00B60FE0 /* StableDiffusion in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,8 +103,7 @@
 			children = (
 				1BEA0C31294BBC1700B60FE0 /* AppDelegate.swift */,
 				1BEA0C33294BBC1700B60FE0 /* SceneDelegate.swift */,
-				1BEA0C35294BBC1700B60FE0 /* ViewController.swift */,
-				1BEA0C37294BBC1700B60FE0 /* Main.storyboard */,
+				1BEA0C35294BBC1700B60FE0 /* LogoGeneratorViewController.swift */,
 				1BEA0C3A294BBC1900B60FE0 /* Assets.xcassets */,
 				1BEA0C3C294BBC1900B60FE0 /* LaunchScreen.storyboard */,
 				1BEA0C3F294BBC1900B60FE0 /* Info.plist */,
@@ -143,6 +144,10 @@
 			dependencies = (
 			);
 			name = "Logo Generator";
+			packageProductDependencies = (
+				1BEA0C62294BBCCB00B60FE0 /* StableDiffusion */,
+				1BEA0C67294BBCF100B60FE0 /* SnapKit */,
+			);
 			productName = "Logo Generator";
 			productReference = 1BEA0C2E294BBC1700B60FE0 /* Logo Generator.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,10 @@
 				Base,
 			);
 			mainGroup = 1BEA0C25294BBC1700B60FE0;
+			packageReferences = (
+				1BEA0C61294BBCCB00B60FE0 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
+				1BEA0C66294BBCF100B60FE0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 1BEA0C2F294BBC1700B60FE0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +242,6 @@
 			files = (
 				1BEA0C3E294BBC1900B60FE0 /* LaunchScreen.storyboard in Resources */,
 				1BEA0C3B294BBC1900B60FE0 /* Assets.xcassets in Resources */,
-				1BEA0C39294BBC1700B60FE0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BEA0C36294BBC1700B60FE0 /* ViewController.swift in Sources */,
+				1BEA0C36294BBC1700B60FE0 /* LogoGeneratorViewController.swift in Sources */,
 				1BEA0C32294BBC1700B60FE0 /* AppDelegate.swift in Sources */,
 				1BEA0C34294BBC1700B60FE0 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +305,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1BEA0C37294BBC1700B60FE0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1BEA0C38294BBC1700B60FE0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1BEA0C3C294BBC1900B60FE0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +442,6 @@
 				INFOPLIST_FILE = "Logo Generator/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +469,6 @@
 				INFOPLIST_FILE = "Logo Generator/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -602,6 +600,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1BEA0C61294BBCCB00B60FE0 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/ml-stable-diffusion.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		1BEA0C66294BBCF100B60FE0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1BEA0C62294BBCCB00B60FE0 /* StableDiffusion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BEA0C61294BBCCB00B60FE0 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
+			productName = StableDiffusion;
+		};
+		1BEA0C67294BBCF100B60FE0 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BEA0C66294BBCF100B60FE0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1BEA0C26294BBC1700B60FE0 /* Project object */;
 }
