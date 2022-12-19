@@ -1,0 +1,10 @@
+{
+  "MLModelVersionStringKey" : "CompVis\/stable-diffusion-v1-4",
+  "MLModelDescriptionKey" : "Stable Diffusion generates images conditioned on text and\/or other images as input through the diffusion process. Please refer to https:\/\/arxiv.org\/abs\/2112.10752 for details.",
+  "MLModelCreatorDefinedKey" : {
+    "com.github.apple.coremltools.version" : "6.1",
+    "com.github.apple.coremltools.source" : "torch==1.13.1"
+  },
+  "MLModelAuthorKey" : "Please refer to the Model Card available at huggingface.co\/CompVis\/stable-diffusion-v1-4",
+  "MLModelLicenseKey" : "OpenRAIL (https:\/\/huggingface.co\/spaces\/CompVis\/stable-diffusion-license)"
+}

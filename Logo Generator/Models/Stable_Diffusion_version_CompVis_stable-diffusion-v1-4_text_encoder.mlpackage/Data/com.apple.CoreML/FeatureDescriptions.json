@@ -1,0 +1,18 @@
+{
+  "Outputs" : {
+    "pooled_outputs" : {
+      "MLFeatureShortDescription" : "The version of the `last_hidden_state` output after pooling"
+    },
+    "last_hidden_state" : {
+      "MLFeatureShortDescription" : "The token embeddings as encoded by the Transformer model"
+    }
+  },
+  "Inputs" : {
+    "input_ids" : {
+      "MLFeatureShortDescription" : "The token ids that represent the input text"
+    }
+  },
+  "TrainingInputs" : {
+
+  }
+}
