@@ -107,7 +107,6 @@
 				1BEA0C3A294BBC1900B60FE0 /* Assets.xcassets */,
 				1BEA0C3C294BBC1900B60FE0 /* LaunchScreen.storyboard */,
 				1BEA0C3F294BBC1900B60FE0 /* Info.plist */,
-				1BEA0C762950D0CE00B60FE0 /* stable_diffusion_models */,
 			);
 			path = "Logo Generator";
 			sourceTree = "<group>";
@@ -127,13 +126,6 @@
 				1BEA0C54294BBC1900B60FE0 /* Logo_GeneratorUITestsLaunchTests.swift */,
 			);
 			path = "Logo GeneratorUITests";
-			sourceTree = "<group>";
-		};
-		1BEA0C762950D0CE00B60FE0 /* stable_diffusion_models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = stable_diffusion_models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
