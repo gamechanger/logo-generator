@@ -17,6 +17,7 @@
 		1BEA0C55294BBC1900B60FE0 /* Logo_GeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C54294BBC1900B60FE0 /* Logo_GeneratorUITestsLaunchTests.swift */; };
 		1BEA0C63294BBCCB00B60FE0 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEA0C62294BBCCB00B60FE0 /* StableDiffusion */; };
 		1BEA0C68294BBCF100B60FE0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEA0C67294BBCF100B60FE0 /* SnapKit */; };
+		1BEA0C7B2950D30C00B60FE0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEA0C7A2950D30C00B60FE0 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BEA0C7B2950D30C00B60FE0 /* RxSwift in Frameworks */,
 				1BEA0C68294BBCF100B60FE0 /* SnapKit in Frameworks */,
 				1BEA0C63294BBCCB00B60FE0 /* StableDiffusion in Frameworks */,
 			);
@@ -147,6 +149,7 @@
 			packageProductDependencies = (
 				1BEA0C62294BBCCB00B60FE0 /* StableDiffusion */,
 				1BEA0C67294BBCF100B60FE0 /* SnapKit */,
+				1BEA0C7A2950D30C00B60FE0 /* RxSwift */,
 			);
 			productName = "Logo Generator";
 			productReference = 1BEA0C2E294BBC1700B60FE0 /* Logo Generator.app */;
@@ -223,6 +226,7 @@
 			packageReferences = (
 				1BEA0C61294BBCCB00B60FE0 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
 				1BEA0C66294BBCF100B60FE0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1BEA0C792950D30C00B60FE0 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 1BEA0C2F294BBC1700B60FE0 /* Products */;
 			projectDirPath = "";
@@ -618,6 +622,14 @@
 				kind = branch;
 			};
 		};
+		1BEA0C792950D30C00B60FE0 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -630,6 +642,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1BEA0C66294BBCF100B60FE0 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		1BEA0C7A2950D30C00B60FE0 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BEA0C792950D30C00B60FE0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
