@@ -10,7 +10,6 @@
 		0391D1DF2951035A002C1CB6 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1DE2951035A002C1CB6 /* Animal.swift */; };
 		0391D1E3295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1E2295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift */; };
 		0391D1E529510C79002C1CB6 /* Color+GC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1E429510C79002C1CB6 /* Color+GC.swift */; };
-		03D30DF42951165900B4AFD4 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 03D30DF32951165900B4AFD4 /* Models */; };
 		1BEA0C32294BBC1700B60FE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C31294BBC1700B60FE0 /* AppDelegate.swift */; };
 		1BEA0C34294BBC1700B60FE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C33294BBC1700B60FE0 /* SceneDelegate.swift */; };
 		1BEA0C36294BBC1700B60FE0 /* LogoGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C35294BBC1700B60FE0 /* LogoGeneratorViewController.swift */; };
@@ -22,6 +21,7 @@
 		1BEA0C63294BBCCB00B60FE0 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEA0C62294BBCCB00B60FE0 /* StableDiffusion */; };
 		1BEA0C68294BBCF100B60FE0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEA0C67294BBCF100B60FE0 /* SnapKit */; };
 		1BEA0C7B2950D30C00B60FE0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEA0C7A2950D30C00B60FE0 /* RxSwift */; };
+		1BEA0CA9295120D600B60FE0 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 1BEA0CA8295120D500B60FE0 /* Models */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 		0391D1DE2951035A002C1CB6 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		0391D1E2295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAvatarGeneratorView.swift; sourceTree = "<group>"; };
 		0391D1E429510C79002C1CB6 /* Color+GC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+GC.swift"; sourceTree = "<group>"; };
-		03D30DF32951165900B4AFD4 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		1BEA0C2E294BBC1700B60FE0 /* Logo Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Logo Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEA0C31294BBC1700B60FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BEA0C33294BBC1700B60FE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		1BEA0C4E294BBC1900B60FE0 /* Logo GeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Logo GeneratorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEA0C52294BBC1900B60FE0 /* Logo_GeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo_GeneratorUITests.swift; sourceTree = "<group>"; };
 		1BEA0C54294BBC1900B60FE0 /* Logo_GeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo_GeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1BEA0CA8295120D500B60FE0 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 		1BEA0C30294BBC1700B60FE0 /* Logo Generator */ = {
 			isa = PBXGroup;
 			children = (
-				03D30DF32951165900B4AFD4 /* Models */,
+				1BEA0CA8295120D500B60FE0 /* Models */,
 				1BEA0C31294BBC1700B60FE0 /* AppDelegate.swift */,
 				1BEA0C33294BBC1700B60FE0 /* SceneDelegate.swift */,
 				1BEA0C35294BBC1700B60FE0 /* LogoGeneratorViewController.swift */,
@@ -257,7 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03D30DF42951165900B4AFD4 /* Models in Resources */,
+				1BEA0CA9295120D600B60FE0 /* Models in Resources */,
 				1BEA0C3E294BBC1900B60FE0 /* LaunchScreen.storyboard in Resources */,
 				1BEA0C3B294BBC1900B60FE0 /* Assets.xcassets in Resources */,
 			);
