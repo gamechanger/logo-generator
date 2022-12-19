@@ -11,6 +11,11 @@
 		0391D1E3295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1E2295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift */; };
 		0391D1E529510C79002C1CB6 /* Color+GC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1E429510C79002C1CB6 /* Color+GC.swift */; };
 		03A01BAF295112BC008DAFD5 /* Unet.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = 03A01BAE295112BC008DAFD5 /* Unet.mlmodelc */; };
+		03D30DEE295113A300B4AFD4 /* merges.txt in Resources */ = {isa = PBXBuildFile; fileRef = 03D30DE92951138B00B4AFD4 /* merges.txt */; };
+		03D30DEF295113A300B4AFD4 /* VAEDecoder.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = 03D30DEA2951138D00B4AFD4 /* VAEDecoder.mlmodelc */; };
+		03D30DF0295113A300B4AFD4 /* SafetyChecker.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = 03D30DEB2951139D00B4AFD4 /* SafetyChecker.mlmodelc */; };
+		03D30DF1295113A300B4AFD4 /* TextEncoder.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = 03D30DEC295113A300B4AFD4 /* TextEncoder.mlmodelc */; };
+		03D30DF2295113A300B4AFD4 /* vocab.json in Resources */ = {isa = PBXBuildFile; fileRef = 03D30DED295113A300B4AFD4 /* vocab.json */; };
 		1BEA0C32294BBC1700B60FE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C31294BBC1700B60FE0 /* AppDelegate.swift */; };
 		1BEA0C34294BBC1700B60FE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C33294BBC1700B60FE0 /* SceneDelegate.swift */; };
 		1BEA0C36294BBC1700B60FE0 /* LogoGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C35294BBC1700B60FE0 /* LogoGeneratorViewController.swift */; };
@@ -46,6 +51,11 @@
 		0391D1E2295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAvatarGeneratorView.swift; sourceTree = "<group>"; };
 		0391D1E429510C79002C1CB6 /* Color+GC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+GC.swift"; sourceTree = "<group>"; };
 		03A01BAE295112BC008DAFD5 /* Unet.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Unet.mlmodelc; sourceTree = "<group>"; };
+		03D30DE92951138B00B4AFD4 /* merges.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = merges.txt; sourceTree = "<group>"; };
+		03D30DEA2951138D00B4AFD4 /* VAEDecoder.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = VAEDecoder.mlmodelc; sourceTree = "<group>"; };
+		03D30DEB2951139D00B4AFD4 /* SafetyChecker.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SafetyChecker.mlmodelc; sourceTree = "<group>"; };
+		03D30DEC295113A300B4AFD4 /* TextEncoder.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TextEncoder.mlmodelc; sourceTree = "<group>"; };
+		03D30DED295113A300B4AFD4 /* vocab.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vocab.json; sourceTree = "<group>"; };
 		1BEA0C2E294BBC1700B60FE0 /* Logo Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Logo Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEA0C31294BBC1700B60FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BEA0C33294BBC1700B60FE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				03A01BAE295112BC008DAFD5 /* Unet.mlmodelc */,
+				03D30DE92951138B00B4AFD4 /* merges.txt */,
+				03D30DEB2951139D00B4AFD4 /* SafetyChecker.mlmodelc */,
+				03D30DEC295113A300B4AFD4 /* TextEncoder.mlmodelc */,
+				03D30DEA2951138D00B4AFD4 /* VAEDecoder.mlmodelc */,
+				03D30DED295113A300B4AFD4 /* vocab.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +283,11 @@
 				1BEA0C3E294BBC1900B60FE0 /* LaunchScreen.storyboard in Resources */,
 				03A01BAF295112BC008DAFD5 /* Unet.mlmodelc in Resources */,
 				1BEA0C3B294BBC1900B60FE0 /* Assets.xcassets in Resources */,
+				03D30DEF295113A300B4AFD4 /* VAEDecoder.mlmodelc in Resources */,
+				03D30DF0295113A300B4AFD4 /* SafetyChecker.mlmodelc in Resources */,
+				03D30DF2295113A300B4AFD4 /* vocab.json in Resources */,
+				03D30DEE295113A300B4AFD4 /* merges.txt in Resources */,
+				03D30DF1295113A300B4AFD4 /* TextEncoder.mlmodelc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
