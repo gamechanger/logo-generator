@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0391D1C12950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_text_encoder.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1BD2950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_text_encoder.mlpackage */; };
-		0391D1C22950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_unet.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1BE2950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_unet.mlpackage */; };
-		0391D1C32950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_vae_decoder.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1BF2950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_vae_decoder.mlpackage */; };
-		0391D1C42950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_safety_checker.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1C02950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_safety_checker.mlpackage */; };
+		0391D1DF2951035A002C1CB6 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1DE2951035A002C1CB6 /* Animal.swift */; };
+		0391D1E3295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1E2295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift */; };
+		0391D1E529510C79002C1CB6 /* Color+GC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1E429510C79002C1CB6 /* Color+GC.swift */; };
 		1BEA0C32294BBC1700B60FE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C31294BBC1700B60FE0 /* AppDelegate.swift */; };
 		1BEA0C34294BBC1700B60FE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C33294BBC1700B60FE0 /* SceneDelegate.swift */; };
 		1BEA0C36294BBC1700B60FE0 /* LogoGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C35294BBC1700B60FE0 /* LogoGeneratorViewController.swift */; };
@@ -42,10 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0391D1BD2950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_text_encoder.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_text_encoder.mlpackage"; sourceTree = "<group>"; };
-		0391D1BE2950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_unet.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_unet.mlpackage"; sourceTree = "<group>"; };
-		0391D1BF2950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_vae_decoder.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_vae_decoder.mlpackage"; sourceTree = "<group>"; };
-		0391D1C02950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_safety_checker.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_safety_checker.mlpackage"; sourceTree = "<group>"; };
+		0391D1DE2951035A002C1CB6 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		0391D1E2295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAvatarGeneratorView.swift; sourceTree = "<group>"; };
+		0391D1E429510C79002C1CB6 /* Color+GC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+GC.swift"; sourceTree = "<group>"; };
 		1BEA0C2E294BBC1700B60FE0 /* Logo Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Logo Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEA0C31294BBC1700B60FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BEA0C33294BBC1700B60FE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,17 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0391D1BC2950F143002C1CB6 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				0391D1C02950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_safety_checker.mlpackage */,
-				0391D1BD2950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_text_encoder.mlpackage */,
-				0391D1BE2950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_unet.mlpackage */,
-				0391D1BF2950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_vae_decoder.mlpackage */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		1BEA0C25294BBC1700B60FE0 = {
 			isa = PBXGroup;
 			children = (
@@ -122,13 +109,15 @@
 		1BEA0C30294BBC1700B60FE0 /* Logo Generator */ = {
 			isa = PBXGroup;
 			children = (
-				0391D1BC2950F143002C1CB6 /* Models */,
 				1BEA0C31294BBC1700B60FE0 /* AppDelegate.swift */,
 				1BEA0C33294BBC1700B60FE0 /* SceneDelegate.swift */,
 				1BEA0C35294BBC1700B60FE0 /* LogoGeneratorViewController.swift */,
 				1BEA0C3A294BBC1900B60FE0 /* Assets.xcassets */,
 				1BEA0C3C294BBC1900B60FE0 /* LaunchScreen.storyboard */,
 				1BEA0C3F294BBC1900B60FE0 /* Info.plist */,
+				0391D1DE2951035A002C1CB6 /* Animal.swift */,
+				0391D1E2295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift */,
+				0391D1E429510C79002C1CB6 /* Color+GC.swift */,
 			);
 			path = "Logo Generator";
 			sourceTree = "<group>";
@@ -220,6 +209,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					1BEA0C2D294BBC1700B60FE0 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -290,13 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0391D1C12950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_text_encoder.mlpackage in Sources */,
 				1BEA0C36294BBC1700B60FE0 /* LogoGeneratorViewController.swift in Sources */,
+				0391D1DF2951035A002C1CB6 /* Animal.swift in Sources */,
 				1BEA0C32294BBC1700B60FE0 /* AppDelegate.swift in Sources */,
-				0391D1C22950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_unet.mlpackage in Sources */,
-				0391D1C32950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_vae_decoder.mlpackage in Sources */,
+				0391D1E3295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift in Sources */,
+				0391D1E529510C79002C1CB6 /* Color+GC.swift in Sources */,
 				1BEA0C34294BBC1700B60FE0 /* SceneDelegate.swift in Sources */,
-				0391D1C42950F166002C1CB6 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_safety_checker.mlpackage in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
