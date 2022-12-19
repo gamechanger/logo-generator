@@ -18,6 +18,10 @@
 		1BEA0C63294BBCCB00B60FE0 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEA0C62294BBCCB00B60FE0 /* StableDiffusion */; };
 		1BEA0C68294BBCF100B60FE0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEA0C67294BBCF100B60FE0 /* SnapKit */; };
 		1BEA0C7B2950D30C00B60FE0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEA0C7A2950D30C00B60FE0 /* RxSwift */; };
+		1BEA0C842950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_unet.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C802950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_unet.mlpackage */; };
+		1BEA0C852950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_text_encoder.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C812950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_text_encoder.mlpackage */; };
+		1BEA0C862950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_safety_checker.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C822950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_safety_checker.mlpackage */; };
+		1BEA0C872950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_vae_decoder.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA0C832950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_vae_decoder.mlpackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		1BEA0C4E294BBC1900B60FE0 /* Logo GeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Logo GeneratorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEA0C52294BBC1900B60FE0 /* Logo_GeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo_GeneratorUITests.swift; sourceTree = "<group>"; };
 		1BEA0C54294BBC1900B60FE0 /* Logo_GeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo_GeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1BEA0C802950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_unet.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = "Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_unet.mlpackage"; path = "../../../stable-diffusion-models/Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_unet.mlpackage"; sourceTree = "<group>"; };
+		1BEA0C812950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_text_encoder.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = "Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_text_encoder.mlpackage"; path = "../../../stable-diffusion-models/Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_text_encoder.mlpackage"; sourceTree = "<group>"; };
+		1BEA0C822950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_safety_checker.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = "Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_safety_checker.mlpackage"; path = "../../../stable-diffusion-models/Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_safety_checker.mlpackage"; sourceTree = "<group>"; };
+		1BEA0C832950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_vae_decoder.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = "Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_vae_decoder.mlpackage"; path = "../../../stable-diffusion-models/Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_vae_decoder.mlpackage"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 				1BEA0C31294BBC1700B60FE0 /* AppDelegate.swift */,
 				1BEA0C33294BBC1700B60FE0 /* SceneDelegate.swift */,
 				1BEA0C35294BBC1700B60FE0 /* LogoGeneratorViewController.swift */,
+				1BEA0C7F2950D48400B60FE0 /* stable-diffusion-models */,
 				1BEA0C3A294BBC1900B60FE0 /* Assets.xcassets */,
 				1BEA0C3C294BBC1900B60FE0 /* LaunchScreen.storyboard */,
 				1BEA0C3F294BBC1900B60FE0 /* Info.plist */,
@@ -128,6 +137,17 @@
 				1BEA0C54294BBC1900B60FE0 /* Logo_GeneratorUITestsLaunchTests.swift */,
 			);
 			path = "Logo GeneratorUITests";
+			sourceTree = "<group>";
+		};
+		1BEA0C7F2950D48400B60FE0 /* stable-diffusion-models */ = {
+			isa = PBXGroup;
+			children = (
+				1BEA0C822950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_safety_checker.mlpackage */,
+				1BEA0C812950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_text_encoder.mlpackage */,
+				1BEA0C802950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_unet.mlpackage */,
+				1BEA0C832950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_vae_decoder.mlpackage */,
+			);
+			path = "stable-diffusion-models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +290,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BEA0C842950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_unet.mlpackage in Sources */,
+				1BEA0C872950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_vae_decoder.mlpackage in Sources */,
+				1BEA0C852950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_text_encoder.mlpackage in Sources */,
 				1BEA0C36294BBC1700B60FE0 /* LogoGeneratorViewController.swift in Sources */,
 				1BEA0C32294BBC1700B60FE0 /* AppDelegate.swift in Sources */,
+				1BEA0C862950D4B100B60FE0 /* Stable_Diffusion_version_CompVis_stable-diffusion-v1-4_safety_checker.mlpackage in Sources */,
 				1BEA0C34294BBC1700B60FE0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
