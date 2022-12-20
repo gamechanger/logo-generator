@@ -71,70 +71,10 @@
         "hasShapeFlexibility" : "0",
         "isOptional" : "0",
         "dataType" : "Float32",
-        "formattedType" : "MultiArray (Float32 2 × 1280 × 16 × 16)",
-        "shortDescription" : "",
-        "shape" : "[2, 1280, 16, 16]",
-        "name" : "input_169_cast",
-        "type" : "MultiArray"
-      },
-      {
-        "hasShapeFlexibility" : "0",
-        "isOptional" : "0",
-        "dataType" : "Float32",
-        "formattedType" : "MultiArray (Float32 2 × 2560 × 8 × 8)",
-        "shortDescription" : "",
-        "shape" : "[2, 2560, 8, 8]",
-        "name" : "input_253_cast",
-        "type" : "MultiArray"
-      },
-      {
-        "hasShapeFlexibility" : "0",
-        "isOptional" : "0",
-        "dataType" : "Float32",
         "formattedType" : "MultiArray (Float32 2 × 640 × 32 × 32)",
         "shortDescription" : "",
         "shape" : "[2, 640, 32, 32]",
-        "name" : "input_115_cast",
-        "type" : "MultiArray"
-      },
-      {
-        "hasShapeFlexibility" : "0",
-        "isOptional" : "0",
-        "dataType" : "Float32",
-        "formattedType" : "MultiArray (Float32 2 × 1280 × 1 × 1)",
-        "shortDescription" : "",
-        "shape" : "[2, 1280, 1, 1]",
-        "name" : "input_15_cast",
-        "type" : "MultiArray"
-      },
-      {
-        "hasShapeFlexibility" : "0",
-        "isOptional" : "0",
-        "dataType" : "Float32",
-        "formattedType" : "MultiArray (Float32 2 × 1280 × 8 × 8)",
-        "shortDescription" : "",
-        "shape" : "[2, 1280, 8, 8]",
-        "name" : "input_171_cast",
-        "type" : "MultiArray"
-      },
-      {
-        "hasShapeFlexibility" : "0",
-        "isOptional" : "0",
-        "dataType" : "Float32",
-        "formattedType" : "MultiArray (Float32 2 × 320 × 64 × 64)",
-        "shortDescription" : "",
-        "shape" : "[2, 320, 64, 64]",
-        "name" : "input_61_cast",
-        "type" : "MultiArray"
-      },
-      {
-        "hasShapeFlexibility" : "0",
-        "isOptional" : "0",
-        "dataType" : "Float32",
-        "formattedType" : "MultiArray (Float32 2 × 640 × 16 × 16)",
-        "shortDescription" : "",
-        "shape" : "[2, 640, 16, 16]",
-        "name" : "input_117_cast",
+        "name" : "input_89_cast",
         "type" : "MultiArray"
       },
       {
@@ -151,16 +91,6 @@
         "hasShapeFlexibility" : "0",
         "isOptional" : "0",
         "dataType" : "Float32",
-        "formattedType" : "MultiArray (Float32 2 × 640 × 32 × 32)",
-        "shortDescription" : "",
-        "shape" : "[2, 640, 32, 32]",
-        "name" : "input_89_cast",
-        "type" : "MultiArray"
-      },
-      {
-        "hasShapeFlexibility" : "0",
-        "isOptional" : "0",
-        "dataType" : "Float32",
         "formattedType" : "MultiArray (Float32 2 × 320 × 64 × 64)",
         "shortDescription" : "",
         "shape" : "[2, 320, 64, 64]",
@@ -171,10 +101,10 @@
         "hasShapeFlexibility" : "0",
         "isOptional" : "0",
         "dataType" : "Float32",
-        "formattedType" : "MultiArray (Float32 2 × 320 × 32 × 32)",
+        "formattedType" : "MultiArray (Float32 2 × 320 × 64 × 64)",
         "shortDescription" : "",
-        "shape" : "[2, 320, 32, 32]",
-        "name" : "input_63_cast",
+        "shape" : "[2, 320, 64, 64]",
+        "name" : "input_61_cast",
         "type" : "MultiArray"
       },
       {
@@ -195,6 +125,76 @@
         "shortDescription" : "",
         "shape" : "[2, 1280, 8, 8]",
         "name" : "hidden_states_149_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 1280 × 1 × 1)",
+        "shortDescription" : "",
+        "shape" : "[2, 1280, 1, 1]",
+        "name" : "input_15_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 1280 × 16 × 16)",
+        "shortDescription" : "",
+        "shape" : "[2, 1280, 16, 16]",
+        "name" : "input_169_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 320 × 32 × 32)",
+        "shortDescription" : "",
+        "shape" : "[2, 320, 32, 32]",
+        "name" : "input_63_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 640 × 32 × 32)",
+        "shortDescription" : "",
+        "shape" : "[2, 640, 32, 32]",
+        "name" : "input_115_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 2560 × 8 × 8)",
+        "shortDescription" : "",
+        "shape" : "[2, 2560, 8, 8]",
+        "name" : "input_253_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 1280 × 8 × 8)",
+        "shortDescription" : "",
+        "shape" : "[2, 1280, 8, 8]",
+        "name" : "input_171_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 640 × 16 × 16)",
+        "shortDescription" : "",
+        "shape" : "[2, 640, 16, 16]",
+        "name" : "input_117_cast",
         "type" : "MultiArray"
       }
     ],

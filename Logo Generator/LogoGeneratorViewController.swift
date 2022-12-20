@@ -41,13 +41,7 @@ class LogoGeneratorViewController: UIViewController {
                 throw LogoGeneratorError.unsupportedOS
             }
             
-            let config = MLModelConfiguration()
-            if !ProcessInfo.processInfo.isiOSAppOnMac {
-                config.computeUnits = .cpuAndGPU
-            }
-            let reduceMemory = ProcessInfo.processInfo.isiOSAppOnMac ? false : true
-            
-            let pipeline = try StableDiffusionPipeline(resourcesAt: resourceUrl, configuration: config, reduceMemory: reduceMemory)
+            let pipeline = try StableDiffusionPipeline(resourcesAt: resourceUrl)
             guard let image = try pipeline.generateImages(prompt: "beach with palm trees", seed: -1).compactMap({ $0 }).first else {
                 throw LogoGeneratorError.generateImagesFailed
             }
