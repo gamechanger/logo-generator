@@ -9,6 +9,7 @@ import UIKit
 import StableDiffusion
 import SnapKit
 import SwiftUI
+import CoreML
 
 enum LogoGeneratorError: Error {
     case unsupportedOS
@@ -39,8 +40,14 @@ class LogoGeneratorViewController: UIViewController {
             guard #available(iOS 16.2, *) else {
                 throw LogoGeneratorError.unsupportedOS
             }
-            let pipeline = try StableDiffusionPipeline(resourcesAt: resourceUrl)
-            try pipeline.loadResources()
+            
+            let config = MLModelConfiguration()
+            if !ProcessInfo.processInfo.isiOSAppOnMac {
+                config.computeUnits = .cpuAndGPU
+            }
+            let reduceMemory = ProcessInfo.processInfo.isiOSAppOnMac ? false : true
+            
+            let pipeline = try StableDiffusionPipeline(resourcesAt: resourceUrl, configuration: config, reduceMemory: reduceMemory)
             guard let image = try pipeline.generateImages(prompt: "beach with palm trees", seed: -1).compactMap({ $0 }).first else {
                 throw LogoGeneratorError.generateImagesFailed
             }
