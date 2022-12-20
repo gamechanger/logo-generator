@@ -44,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		0306A8AD295209050019C479 /* ImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
+		0306A8AF2952212F0019C479 /* Logo Generator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Logo Generator.entitlements"; sourceTree = "<group>"; };
 		0391D1DE2951035A002C1CB6 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		0391D1E2295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAvatarGeneratorView.swift; sourceTree = "<group>"; };
 		0391D1E429510C79002C1CB6 /* Color+GC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+GC.swift"; sourceTree = "<group>"; };
@@ -113,6 +114,7 @@
 		1BEA0C30294BBC1700B60FE0 /* Logo Generator */ = {
 			isa = PBXGroup;
 			children = (
+				0306A8AF2952212F0019C479 /* Logo Generator.entitlements */,
 				1BEA0CA8295120D500B60FE0 /* Models */,
 				1BEA0C31294BBC1700B60FE0 /* AppDelegate.swift */,
 				1BEA0C33294BBC1700B60FE0 /* SceneDelegate.swift */,
@@ -460,6 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Logo Generator/Logo Generator.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KCS6SA8QRM;
@@ -487,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Logo Generator/Logo Generator.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KCS6SA8QRM;

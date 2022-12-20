@@ -36,5 +36,53 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4AEE23CB-F8BD-477D-A515-4E01566B25FF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Logo Generator/ImageGenerator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "generate(prompt:progressHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4AEE23CB-F8BD-477D-A515-4E01566B25FF - 882ee7755e855586"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Logo_Generator.ImageGenerator.generate(prompt: Swift.String, progressHandler: Swift.Optional&lt;(StableDiffusion.StableDiffusionPipeline.Progress) -&gt; Swift.Bool&gt;) -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  moduleName = "Logo Generator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josh/Documents/logo-generator/Logo%20Generator/ImageGenerator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  uuid = "4AEE23CB-F8BD-477D-A515-4E01566B25FF - 882ee7755e855586"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Logo_Generator.ImageGenerator.generate(prompt: Swift.String, progressHandler: Swift.Optional&lt;(StableDiffusion.StableDiffusionPipeline.Progress) -&gt; Swift.Bool&gt;) -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  moduleName = "Logo Generator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josh/Documents/logo-generator/Logo%20Generator/ImageGenerator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "476">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

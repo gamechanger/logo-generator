@@ -83,7 +83,6 @@ struct PlayerAvatarGeneratorView: View {
                 }
             }
             
-            Spacer().frame(maxHeight: .infinity)
             
             if let image = model.image {
                 Image(uiImage: image)
@@ -102,8 +101,7 @@ struct PlayerAvatarGeneratorView: View {
                 Spacer().frame(height: 16)
             }
             
-            Spacer()
-                .frame(maxHeight: .infinity)
+            Spacer().frame(maxHeight: .infinity)
         }
         .padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
     }
