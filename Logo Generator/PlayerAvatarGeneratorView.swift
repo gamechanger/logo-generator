@@ -16,24 +16,37 @@ struct PlayerAvatarGeneratorView: View {
     
     var body: some View {
         VStack {
-            Text("Choose an animal for your avatar:")
-                .frame(maxWidth: .infinity)
-                .multilineTextAlignment(.leading)
-            ScrollView {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 50))], spacing: 16) {
-                    ForEach(Animal.allCases) { enumCase in
-                        Button(action: {
-                            model.animal = enumCase
-                        }) {
-                            Text(enumCase.rawValue)
-                                .font(.system(size: 24))
-                        }
-                        .padding(.init(top: 2, leading: 8, bottom: 2, trailing: 8))
-                        .background(model.animal == enumCase ? Color.gcGrayLight : .gcGrayLighter)
-                        .cornerRadius(5)
+            HStack {
+                Text("Choose an animal for your avatar:")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 50))], spacing: 16) {
+                ForEach(Animal.allCases) { enumCase in
+                    Button(action: {
+                        model.animal = enumCase
+                    }) {
+                        Text(enumCase.rawValue)
+                            .font(.system(size: 24))
                     }
+                    .padding(.init(top: 2, leading: 8, bottom: 2, trailing: 8))
+                    .background(model.animal == enumCase ? Color.gcGrayLight : .gcGrayLighter)
+                    .cornerRadius(8)
                 }
             }
+            
+            Spacer()
+                .frame(height: 32)
+            
+            Button(action: {}) {
+                Text("Generate")
+            }
+            .padding(.init(top: 4, leading: 8, bottom: 4, trailing: 8))
+            .foregroundColor(.white)
+            .background(Color.blue)
+            .cornerRadius(8)
+            
+            Spacer()
+                .frame(maxHeight: .infinity)
         }
         .padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
     }
