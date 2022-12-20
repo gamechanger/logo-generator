@@ -66,8 +66,6 @@ struct PlayerAvatarGeneratorView: View {
             Spacer().frame(height: 16)
                 
             switch imageGenerator.generationState {
-            case .started:
-                ProgressView()
             case let .generating(progress: progress):
                 let progress = Double(progress.step) / Double(progress.stepCount)
                 HStack {

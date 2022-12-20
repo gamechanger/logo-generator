@@ -65,23 +65,33 @@ import CoreML
     }
     
     func generate(prompt: String) {
-        do {
-            self.generationState = .started
-            guard let image = try Self.pipeline.generateImages(prompt: prompt,
-                                                          seed: Int.random(in: Int.min...Int.max),
-                                                          progressHandler: { progress in
-                print("Finished step \(progress.step) / \(progress.stepCount)")
-                self.generationState = .generating(progress: progress)
-                
-                return true
-            }).compactMap({ $0 }).first else {
-                throw LogoGeneratorError.generateImagesFailed
+        Task.detached(priority: .high) {
+            do {
+                await self.setState(.started)
+                guard let image = try Self.pipeline.generateImages(prompt: prompt,
+                                                                   seed: Int.random(in: Int.min...Int.max),
+                                                                   progressHandler: self.progressHandler(progress:)).compactMap({ $0 }).first else {
+                    throw LogoGeneratorError.generateImagesFailed
+                }
+               
+                await self.setState(.finished(image: UIImage(cgImage: image)))
+            } catch {
+                print(error)
+                await self.setState(.failed(error: error))
             }
-           
-            self.generationState = .finished(image: UIImage(cgImage: image))
-        } catch {
-            print(error)
-            self.generationState = .failed(error: error)
         }
+
+    }
+    
+    private func setState(_ state: GenerationState) {
+        generationState = state
+    }
+    
+    nonisolated func progressHandler(progress: StableDiffusionPipeline.Progress) -> Bool {
+        print("Finished step \(progress.step) / \(progress.stepCount)")
+        DispatchQueue.main.async {
+            self.setState(.generating(progress: progress))
+        }
+        return true
     }
 }
