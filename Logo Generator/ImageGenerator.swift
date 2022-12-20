@@ -65,14 +65,9 @@ import CoreML
     }
     
     func generate(prompt: String) {
-        guard let path = Bundle.main.path(forResource: "Models", ofType: nil, inDirectory: nil) else {
-            fatalError("Fatal error: failed to find the CoreML models.")
-        }
-        let resourceUrl = URL(fileURLWithPath: path)
         do {
             self.generationState = .started
-            let pipeline = try StableDiffusionPipeline(resourcesAt: resourceUrl, configuration: ImageGenerator.configuration, reduceMemory: true)
-            guard let image = try pipeline.generateImages(prompt: prompt,
+            guard let image = try Self.pipeline.generateImages(prompt: prompt,
                                                           seed: Int.random(in: Int.min...Int.max),
                                                           progressHandler: { progress in
                 print("Finished step \(progress.step) / \(progress.stepCount)")
