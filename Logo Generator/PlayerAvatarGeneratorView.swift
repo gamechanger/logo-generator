@@ -10,7 +10,12 @@ import SwiftUI
 class PlayerAvatarGeneratorViewState: ObservableObject {
     @Published var animal: Animal?
     @Published var sport: String = "baseball"
-    @Published var image: UIImage?
+    @Published var image: UIImage? {
+        didSet {
+            hasGenerated = true
+        }
+    }
+    @Published fileprivate var hasGenerated: Bool = false
 }
 
 @MainActor private class PlayerAvatarGeneratorProgressState: ObservableObject {
@@ -22,6 +27,8 @@ struct PlayerAvatarGeneratorView: View {
     @ObservedObject var model: PlayerAvatarGeneratorViewState
     @StateObject private var progressState = PlayerAvatarGeneratorProgressState()
     @StateObject private var imageGenerator = ImageGenerator()
+    
+    var imageReceived: ((UIImage?) -> Void)? = nil
     
     var body: some View {
         VStack {
@@ -52,30 +59,38 @@ struct PlayerAvatarGeneratorView: View {
             Button(action: {
                 if let animal = model.animal {
                     imageGenerator.generate(prompt: "photorealistic \(animal.description) dressed as an athlete and playing \(model.sport), HD, detailed and intricate")
-                    progressState.hasGenerated = true
                 }
             }) {
-                Text(progressState.hasGenerated ? "Regenerate" : (imageGenerator.isGenerating ? "Generating..." : "Generate"))
+                if imageGenerator.isStarting {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+                } else {
+                    Text(model.hasGenerated ? "Regenerate" : (imageGenerator.isGenerating ? "Generating..." : "Generate"))
+                }
             }
+            .frame(width: 100)
             .padding(.init(top: 4, leading: 8, bottom: 4, trailing: 8))
             .foregroundColor(.white)
             .background(imageGenerator.isGenerating ? Color.gcGrayLight : Color.gcBlue)
             .disabled(imageGenerator.isGenerating)
             .cornerRadius(8)
+            .onChange(of: imageGenerator.image) {
+                model.image = $0
+                imageReceived?($0)
+            }
             
             Spacer().frame(height: 16)
                 
             switch imageGenerator.generationState {
             case let .generating(progress: progress):
-                let progress = Double(progress.step) / Double(progress.stepCount)
+                let progressPercentage = Double(progress.step) / Double(progress.stepCount)
                 HStack {
                     ProgressView()
                         .frame(width: 16)
                     Spacer().frame(width: 16)
-                    ProgressView(value: progress)
+                    ProgressView(value: progressPercentage)
                     Spacer().frame(width: 32)
                 }
-                
             case let .finished(image):
                 Image(uiImage: image)
                 

@@ -15,10 +15,17 @@ import CoreML
     
     enum GenerationState {
         case stopped
-        case started
+        case starting
         case generating(progress: StableDiffusionPipeline.Progress)
         case finished(image: UIImage)
         case failed(error: Error)
+        
+        func isStarting() -> Bool {
+            switch self {
+            case .starting: return true
+            default: return false
+            }
+        }
         
         func isGenerating() -> Bool {
             switch self {
@@ -28,11 +35,17 @@ import CoreML
         }
     }
     
+    @Published var image: UIImage? = nil
     @Published var generationState: GenerationState = .stopped
     
-    var isGenerating: Bool {
-        return self.generationState.isGenerating()
+    var isStarting: Bool {
+        return generationState.isStarting()
     }
+    
+    var isGenerating: Bool {
+        return generationState.isGenerating()
+    }
+    
     
     private static let configuration: MLModelConfiguration = {
         let configuration = MLModelConfiguration()
@@ -65,22 +78,28 @@ import CoreML
     }
     
     func generate(prompt: String) {
+        setState(.starting)
         Task.detached(priority: .high) {
             do {
-                await self.setState(.started)
                 guard let image = try Self.pipeline.generateImages(prompt: prompt,
                                                                    seed: Int.random(in: Int.min...Int.max),
                                                                    progressHandler: self.progressHandler(progress:)).compactMap({ $0 }).first else {
                     throw LogoGeneratorError.generateImagesFailed
                 }
                
-                await self.setState(.finished(image: UIImage(cgImage: image)))
+                let uiImage = UIImage(cgImage: image)
+                await self.setState(.finished(image: uiImage))
+                await self.setImage(uiImage)
             } catch {
                 print(error)
                 await self.setState(.failed(error: error))
             }
         }
 
+    }
+    
+    private func setImage(_ image: UIImage) {
+        self.image = image
     }
     
     private func setState(_ state: GenerationState) {
