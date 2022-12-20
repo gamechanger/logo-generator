@@ -11,34 +11,59 @@ import StableDiffusion
 import CoreML
 
 @available(iOS 16.2, *)
-class ImageGenerator {
+@MainActor class ImageGenerator: ObservableObject {
+    
+    enum GenerationState {
+        case stopped
+        case started
+        case generating(progress: StableDiffusionPipeline.Progress)
+        case finished(image: UIImage)
+        case failed(error: Error)
+        
+        func isGenerating() -> Bool {
+            switch self {
+            case .generating: return true
+            default: return false
+            }
+        }
+    }
+    
+    @Published var generationState: GenerationState = .stopped
+    
+    var isGenerating: Bool {
+        return self.generationState.isGenerating()
+    }
+    
     private static let configuration: MLModelConfiguration = {
         let configuration = MLModelConfiguration()
         configuration.computeUnits = .cpuAndGPU
         return configuration
     }()
     
-    static func generate(prompt: String,
-                         progressHandler: ((StableDiffusionPipeline.Progress) -> Bool)? = nil) -> UIImage? {
+    func generate(prompt: String) {
         guard let path = Bundle.main.path(forResource: "Models", ofType: nil, inDirectory: nil) else {
             fatalError("Fatal error: failed to find the CoreML models.")
         }
         let resourceUrl = URL(fileURLWithPath: path)
         do {
-            let pipeline = try StableDiffusionPipeline(resourcesAt: resourceUrl, configuration: configuration, reduceMemory: true)
+            self.generationState = .started
+            let pipeline = try StableDiffusionPipeline(resourcesAt: resourceUrl, configuration: ImageGenerator.configuration, reduceMemory: true)
             guard let image = try pipeline.generateImages(prompt: prompt,
                                                           stepCount: 10,
                                                           seed: Int.random(in: Int.min...Int.max),
                                                           progressHandler: { progress in
                 print("Finished step \(progress.step) / \(progress.stepCount)")
-                return progressHandler?(progress) ?? true
+                self.generationState = .generating(progress: progress)
+                
+                return true
             }).compactMap({ $0 }).first else {
                 throw LogoGeneratorError.generateImagesFailed
             }
-            return UIImage(cgImage: image)
+           
+            self.generationState = .finished(image: UIImage(cgImage: image))
         } catch {
             print(error)
-            return nil
+            self.generationState = .failed(error: error)
         }
     }
 }

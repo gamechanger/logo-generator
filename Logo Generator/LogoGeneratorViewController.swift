@@ -19,11 +19,13 @@ enum LogoGeneratorError: Error {
 class LogoGeneratorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let generatorView = UIHostingController(rootView: PlayerAvatarGeneratorView(model: .init()))
-        view.addSubview(generatorView.view)
-        generatorView.view.snp.makeConstraints { make in
-            make.left.top.right.bottom.equalToSuperview()
+        
+        if #available(iOS 16.2, *) {
+            let generatorView = UIHostingController(rootView: PlayerAvatarGeneratorView(model: .init()))
+            view.addSubview(generatorView.view)
+            generatorView.view.snp.makeConstraints { make in
+                make.left.top.right.bottom.equalToSuperview()
+            }
         }
     }
 }

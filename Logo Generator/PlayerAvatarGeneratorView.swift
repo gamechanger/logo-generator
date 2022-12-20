@@ -13,15 +13,15 @@ class PlayerAvatarGeneratorViewState: ObservableObject {
     @Published var image: UIImage?
 }
 
-private class PlayerAvatarGeneratorProgressState: ObservableObject {
+@MainActor private class PlayerAvatarGeneratorProgressState: ObservableObject {
     @Published var hasGenerated: Bool = false
-    @Published var generating: Bool = false
-    @Published var progress: Double = 0
 }
 
+@available(iOS 16.2, *)
 struct PlayerAvatarGeneratorView: View {
     @ObservedObject var model: PlayerAvatarGeneratorViewState
-    @ObservedObject private var progressState = PlayerAvatarGeneratorProgressState()
+    @StateObject private var progressState = PlayerAvatarGeneratorProgressState()
+    @StateObject private var imageGenerator = ImageGenerator()
     
     var body: some View {
         VStack {
@@ -39,7 +39,7 @@ struct PlayerAvatarGeneratorView: View {
                     }
                     .padding(.init(top: 2, leading: 8, bottom: 2, trailing: 8))
                     .background(model.animal == enumCase ? Color.gcLightBlue : .gcGrayLighter)
-                    .disabled(progressState.generating)
+                    .disabled(imageGenerator.isGenerating)
                     .cornerRadius(8)
                 }
             }
@@ -47,44 +47,35 @@ struct PlayerAvatarGeneratorView: View {
             Spacer().frame(height: 32)
             
             Button(action: {
-                if let animal = model.animal,
-                   #available(iOS 16.2, *) {
-                    model.image = nil
-                    progressState.generating = true
-                    let image = ImageGenerator.generate(prompt: "photorealistic \(animal.description) dressed as an athlete and playing \(model.sport), HD, detailed and intricate",
-                                                        progressHandler: { progress in
-                        progressState.progress = Double(progress.step) / Double(progress.stepCount)
-                        return true
-                    })
-                    progressState.generating = false
+                if let animal = model.animal {
+                    imageGenerator.generate(prompt: "photorealistic \(animal.description) dressed as an athlete and playing \(model.sport), HD, detailed and intricate")
                     progressState.hasGenerated = true
-                    progressState.progress = 0
-                    
-                    model.image = image
                 }
             }) {
-                Text(progressState.hasGenerated ? "Regenerate" : (progressState.generating ? "Generating..." : "Generate"))
+                Text(progressState.hasGenerated ? "Regenerate" : (imageGenerator.isGenerating ? "Generating..." : "Generate"))
             }
             .padding(.init(top: 4, leading: 8, bottom: 4, trailing: 8))
             .foregroundColor(.white)
-            .background(progressState.generating ? Color.gcGrayLight : Color.gcBlue)
-            .disabled(progressState.generating)
+            .background(imageGenerator.isGenerating ? Color.gcGrayLight : Color.gcBlue)
+            .disabled(imageGenerator.isGenerating)
             .cornerRadius(8)
             
             Spacer().frame(height: 16)
-
-            if progressState.generating {
+                
+            switch imageGenerator.generationState {
+            case .started:
+                ProgressView()
+            case let .generating(progress: progress):
+                let progress = Double(progress.step) / Double(progress.stepCount)
                 HStack {
                     ProgressView()
                         .frame(width: 16)
                     Spacer().frame(width: 16)
-                    ProgressView(value: progressState.progress)
+                    ProgressView(value: progress)
                     Spacer().frame(width: 32)
                 }
-            }
-            
-            
-            if let image = model.image {
+                
+            case let .finished(image):
                 Image(uiImage: image)
                 
                 Spacer().frame(height: 16)
@@ -94,11 +85,13 @@ struct PlayerAvatarGeneratorView: View {
                 }
                 .padding(.init(top: 4, leading: 8, bottom: 4, trailing: 8))
                 .foregroundColor(.white)
-                .background(progressState.generating ? Color.gcGrayLight : Color.gcBlue)
-                .disabled(progressState.generating)
+                .background(imageGenerator.isGenerating ? Color.gcGrayLight : Color.gcBlue)
+                .disabled(imageGenerator.isGenerating)
                 .cornerRadius(8)
                 
                 Spacer().frame(height: 16)
+            default:
+                HStack{}
             }
             
             Spacer().frame(maxHeight: .infinity)
