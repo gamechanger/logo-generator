@@ -23,6 +23,7 @@
 		1BEA0C68294BBCF100B60FE0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEA0C67294BBCF100B60FE0 /* SnapKit */; };
 		1BEA0C7B2950D30C00B60FE0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEA0C7A2950D30C00B60FE0 /* RxSwift */; };
 		1BEA0CA9295120D600B60FE0 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 1BEA0CA8295120D500B60FE0 /* Models */; };
+		820C5CB92952313F006E34C3 /* LogoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820C5CB82952313F006E34C3 /* LogoPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		1BEA0C52294BBC1900B60FE0 /* Logo_GeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo_GeneratorUITests.swift; sourceTree = "<group>"; };
 		1BEA0C54294BBC1900B60FE0 /* Logo_GeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo_GeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1BEA0CA8295120D500B60FE0 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		820C5CB82952313F006E34C3 /* LogoPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				1BEA0C3F294BBC1900B60FE0 /* Info.plist */,
 				0391D1DE2951035A002C1CB6 /* Animal.swift */,
 				0391D1E2295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift */,
+				820C5CB82952313F006E34C3 /* LogoPickerView.swift */,
 				0391D1E429510C79002C1CB6 /* Color+GC.swift */,
 				0306A8AD295209050019C479 /* ImageGenerator.swift */,
 			);
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BEA0C36294BBC1700B60FE0 /* LogoGeneratorViewController.swift in Sources */,
+				820C5CB92952313F006E34C3 /* LogoPickerView.swift in Sources */,
 				0391D1DF2951035A002C1CB6 /* Animal.swift in Sources */,
 				1BEA0C32294BBC1700B60FE0 /* AppDelegate.swift in Sources */,
 				0306A8AE295209050019C479 /* ImageGenerator.swift in Sources */,
