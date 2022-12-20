@@ -29,20 +29,23 @@ struct PlayerAvatarGeneratorView: View {
                 Text("Choose an animal for your avatar:")
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 50))], spacing: 16) {
-                ForEach(Animal.allCases) { enumCase in
-                    Button(action: {
-                        model.animal = enumCase
-                    }) {
-                        Text(enumCase.rawValue)
-                            .font(.system(size: 24))
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 50))], spacing: 16) {
+                    ForEach(Animal.allCases) { enumCase in
+                        Button(action: {
+                            model.animal = enumCase
+                        }) {
+                            Text(enumCase.rawValue)
+                                .font(.system(size: 24))
+                        }
+                        .padding(.init(top: 2, leading: 8, bottom: 2, trailing: 8))
+                        .background(model.animal == enumCase ? Color.gcLightBlue : .gcGrayLighter)
+                        .disabled(imageGenerator.isGenerating)
+                        .cornerRadius(8)
                     }
-                    .padding(.init(top: 2, leading: 8, bottom: 2, trailing: 8))
-                    .background(model.animal == enumCase ? Color.gcLightBlue : .gcGrayLighter)
-                    .disabled(imageGenerator.isGenerating)
-                    .cornerRadius(8)
                 }
             }
+            .frame(maxHeight: 136)
             
             Spacer().frame(height: 32)
             

@@ -21,6 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         self.window?.rootViewController = LogoGeneratorViewController()
         self.window?.makeKeyAndVisible()
+        
+        DispatchQueue.main.async {
+            if #available(iOS 16.2, *) {
+                print("Started loading pipeline")
+                ImageGenerator.loadPipeline()
+                print("Loaded pipeline")
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -28,11 +36,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+        if #available(iOS 16.2, *) {
+            print("Started unloading pipeline")
+            ImageGenerator.unloadPipeline()
+            print("Unloaded pipeline")
+        }
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

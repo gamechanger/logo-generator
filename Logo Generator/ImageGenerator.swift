@@ -39,6 +39,30 @@ import CoreML
         configuration.computeUnits = .cpuAndGPU
         return configuration
     }()
+
+    private static let pipeline: StableDiffusionPipeline = {
+        guard let path = Bundle.main.path(forResource: "Models", ofType: nil, inDirectory: nil) else {
+            fatalError("Fatal error: failed to find the CoreML models.")
+        }
+        let resourceUrl = URL(fileURLWithPath: path)
+        do {
+            return try StableDiffusionPipeline(resourcesAt: resourceUrl, configuration: configuration)
+        } catch {
+            fatalError("Fatal error: failed to create StableDiffusionPipeline\n\(error)")
+        }
+    }()
+    
+    static func loadPipeline() {
+        do {
+            try pipeline.loadResources()
+        } catch {
+            print(error)
+        }
+    }
+    
+    static func unloadPipeline() {
+        pipeline.unloadResources()
+    }
     
     func generate(prompt: String) {
         guard let path = Bundle.main.path(forResource: "Models", ofType: nil, inDirectory: nil) else {
@@ -49,7 +73,6 @@ import CoreML
             self.generationState = .started
             let pipeline = try StableDiffusionPipeline(resourcesAt: resourceUrl, configuration: ImageGenerator.configuration, reduceMemory: true)
             guard let image = try pipeline.generateImages(prompt: prompt,
-                                                          stepCount: 10,
                                                           seed: Int.random(in: Int.min...Int.max),
                                                           progressHandler: { progress in
                 print("Finished step \(progress.step) / \(progress.stepCount)")
