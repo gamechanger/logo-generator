@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0306A8AE295209050019C479 /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306A8AD295209050019C479 /* ImageGenerator.swift */; };
 		0391D1DF2951035A002C1CB6 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1DE2951035A002C1CB6 /* Animal.swift */; };
 		0391D1E3295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1E2295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift */; };
 		0391D1E529510C79002C1CB6 /* Color+GC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391D1E429510C79002C1CB6 /* Color+GC.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0306A8AD295209050019C479 /* ImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
 		0391D1DE2951035A002C1CB6 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		0391D1E2295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAvatarGeneratorView.swift; sourceTree = "<group>"; };
 		0391D1E429510C79002C1CB6 /* Color+GC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+GC.swift"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				0391D1DE2951035A002C1CB6 /* Animal.swift */,
 				0391D1E2295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift */,
 				0391D1E429510C79002C1CB6 /* Color+GC.swift */,
+				0306A8AD295209050019C479 /* ImageGenerator.swift */,
 			);
 			path = "Logo Generator";
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				1BEA0C36294BBC1700B60FE0 /* LogoGeneratorViewController.swift in Sources */,
 				0391D1DF2951035A002C1CB6 /* Animal.swift in Sources */,
 				1BEA0C32294BBC1700B60FE0 /* AppDelegate.swift in Sources */,
+				0306A8AE295209050019C479 /* ImageGenerator.swift in Sources */,
 				0391D1E3295105CE002C1CB6 /* PlayerAvatarGeneratorView.swift in Sources */,
 				0391D1E529510C79002C1CB6 /* Color+GC.swift in Sources */,
 				1BEA0C34294BBC1700B60FE0 /* SceneDelegate.swift in Sources */,
