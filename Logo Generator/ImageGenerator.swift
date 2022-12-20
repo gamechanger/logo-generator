@@ -20,7 +20,7 @@ class ImageGenerator {
         do {
             let pipeline = try StableDiffusionPipeline(resourcesAt: resourceUrl)
             guard let image = try pipeline.generateImages(prompt: prompt,
-                                                          stepCount: 10,
+                                                          stepCount: 2,
                                                           seed: -1,
                                                           progressHandler: { progress in
                 print("Finished step \(progress.step) / \(progress.stepCount)")
